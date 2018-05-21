@@ -19,11 +19,10 @@ namespace StringManipulation
 
             foreach (var item in fileContents)
             {
-                Console.WriteLine("| " + ChangeDateFormat(item.pubDate) + " | " + Truncate(item.title, 24) + " | " + Truncate(item.author,28) + " |" );
+                Console.WriteLine("| " + ChangeDateFormat(item.pubDate) + " | " + Truncate(item.title, 24) + " | " + Truncate(item.author, 28) + " |");
             }
             Console.ReadLine();
 
-           
         }
 
         static List<FileContents> ImportFile()
@@ -59,7 +58,7 @@ namespace StringManipulation
 
             return fileContentList;
         }
-         public static string Truncate( string value, int maxChars)//truncates, fill fixed width
+        public static string Truncate(string value, int maxChars)//truncates, fill fixed width
         {
             return value.Length <= maxChars ? value.PadRight(maxChars) : value.Substring(0, maxChars) + "...";
         }
