@@ -16,13 +16,11 @@ namespace StringManipulation
         {
 
             this.pubDate = DateTime.Parse(pubDate);
-            this.title = title.Replace("?","");
+            this.title = title.Replace("?", "");
             this.author = author.Replace("?", "");
-
-
 
         }
 
-       
+
     }
 }
